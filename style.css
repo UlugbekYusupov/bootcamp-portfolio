@@ -140,6 +140,7 @@ ul li {
   width: 50px;
   height: 50px;
 }
+
 .icon5 {
   display: inline-block;
   background: url("public/icons/Photographer.png") center / contain no-repeat;
@@ -281,4 +282,99 @@ ul li {
   background-position: center;
   background-size: contain;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#contact {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  height: 100%;
+}
+
+.heading2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+label {
+  color: #767676;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f0f0f6;
+  border: none;
+}
+
+textarea {
+  background-color: #f0f0f6;
+  border: none;
+  height: 100%;
+}
+
+#send-btn {
+  width: 200px;
+  border: none;
+  background-color: orange;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.info-card {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.info-card-item {
+  display: flex;
+  color: #767676;
+  justify-content: space-between;
+}
+
+.info-card i {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background-color: orange;
+  margin: 0 auto;
+}
+
+footer {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 20px;
 }
