@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 10px;
+        margin: 0 auto;
+        background-color: yellow;
+        padding: 10px;
+      }
+
+      .top,
+      .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .top div,
+      .bottom div {
+        background-color: red;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        height: 150px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .top div,
+        .bottom div {
+          /* flex: 0 0 100%; */
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 100%;
+        }
+      }
+
+      /* -------- Tablet (601px – 1024px) -------- */
+      @media screen and (min-width: 601px) and (max-width: 1024px) {
+        .top div,
+        .bottom div {
+          /* flex: 1 1 calc(50% - 10px); */
+          flex-grow: 1;
+          flex-shrink: 1;
+          flex-basis: calc(50% - 10px);
+        }
+      }
+
+      /* -------- Desktop (1025px and up) -------- */
+      @media screen and (min-width: 1025px) {
+        .top div,
+        .bottom div {
+          /* flex: 1 1 calc(25% - 10px); */
+          flex-grow: 1;
+          flex-shrink: 1;
+          flex-basis: calc(25% - 10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+      <div class="bottom">
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+      </div>
+    </div>
+  </body>
+</html>

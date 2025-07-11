@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   background-color: #f7f8fb;
   font-family: "Inter", sans-serif;
 }
@@ -161,7 +161,13 @@ ul li {
   width: 100%;
 }
 
+.gold {
+  position: relative;
+}
+
 .gold > div {
+  position: absolute;
+  top: 0;
   background-color: orange;
   width: 100%;
   text-align: center;
@@ -298,6 +304,7 @@ ul li {
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-sizing: border-box;
 }
 
 form {
