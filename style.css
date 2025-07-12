@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   background-color: #f7f8fb;
   font-family: "Inter", sans-serif;
 }
@@ -46,6 +46,8 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
 
@@ -59,6 +61,14 @@ ul li {
   justify-content: center;
   align-items: center;
   height: 500px;
+}
+
+.services-elements {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px 200px;
+  gap: 20px;
 }
 
 .img {
@@ -90,14 +100,6 @@ ul li {
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
-}
-
-.services-elements {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 200px 200px;
-  gap: 20px;
 }
 
 .grid-item {
@@ -384,4 +386,51 @@ footer {
   background-color: white;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .left h1 {
+    font-size: 48px;
+  }
+
+  #hero {
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 20px;
+    height: auto;
+  }
+
+  section > p {
+    width: 100%;
+  }
+  .services-elements {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+  .price-items {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .recommendation-cards {
+    flex-direction: column;
+  }
+
+  ul {
+    width: 50%;
+  }
+  li a {
+    font-size: 0.8rem;
+  }
+
+  .portfolio-items {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 300px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media screen and (min-widht: 1024px) {
 }
